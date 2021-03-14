@@ -1,0 +1,168 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+% %A Few Useful Packages
+\usepackage{marvosym}
+%\usepackage{fontspec} 					%for loading fonts
+\usepackage{url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{enumitem}
+\usepackage{xspace}
+
+
+
+\usepackage{hyphenat}
+
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+%\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{0pt}{0pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+\newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
+
+% %Italian hyphenation for the word: ''corporations''
+% %\hyphenation{im-pre-se}
+
+%\addtolength{\textwidth}{1.0in}
+
+% %-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+\newgeometry{left=0.5in,right=0.5in,top=0.5in,bottom=0.1in}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Ичалов Леонид Евгеньевич
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\begin{center}
+%\section{Персональные данные}
+%\hline
+\hspace{0.7cm}\begin{tabular}{rl}
+    \textsc{Дата рождения:} &  17 августа 2001 \\
+    %\textsc{Адрес:}   & Москва, ул. Люсиновская, 68--446А \\
+    \textsc{Телефон:}     & +7 915 242-00-57\\
+    \textsc{email:}     & \href{mailto:leonid.ichalov@gmail.com}{leonid.ichalov@gmail.com}
+\end{tabular}
+\end{center}
+\section{Образование}
+
+\vspace{5px}
+\begin{tabular}{lr}
+\textbf{\large Высшая школа экономики}\\
+Факультет компьютерных наук, образовательная программа
+прикладная математика\\\hspace{14.35cm} и информатика \\
+\hspace{0.5cm}Бакалавриат, 2 курс, 2024\\
+
+\textbf{ГБОУ Школа № 179}, 2019\\
+\end{tabular}
+\\
+\section{Дополнительное образование}
+
+\vspace{5px}
+\begin{tabular}{lr}
+Тинькофф Поколение: машинное обучение, глубокое обучение\\
+Летняя компьютерная школа, параллель A
+\end{tabular}
+\\
+
+\section{Навыки}
+
+\vspace{5px}
+\begin{tabular}{lr}
+Python, \CC, Linux, Jupyter\\
+\end{tabular}
+\\
+\section{Другое}
+
+\vspace{5px}
+\begin{tabular}{l}
+Победитель (2019) и призер (2017, 2018) заключительного этапа Всероссийской \\\hspace{3.35cm}олимпиады школьников по информатике
+\end{tabular}
+
+\end{document}
+
+
+% 1. Образование пишется с текущего до самого старого. То есть сначала вышка, потом школа, все с годами обучения или предполагаемыми датами
+% 2. Тиньков в дополнительное образование, туда можно дописать про ЛКШ, например (или еще что-нибудь). в тинькове тоже можно указать год и что не только МО но и нейросети (лучше полные названия курсов) 
+% 3. Давай ориентироваться хотя бы на полстраницы. сейчас у тебя явно что-то с вертикальными отступами и в целом между каждой строчкой можно побольше пробелов и побольше шрифт =) И жирным места обучения
+% 4. Теперь про достижения. Я сходу могу назвать что ты не только победитель но и призер, можно так: Победитель (2019) и призер (2017, 2018) ... 
+% Потом ты вроде бы много был ассистентом. Был призером каких-то мат олимпиад 
+% А, мб можно про юниверсум сказать? мб даже код есть?
+% и ВКОШП!
+
+% я пошла спать (точнее работать), пришли потом еще раз =)
+
+% Что за влкдака строчка? тебе не обязательно все делать как у меня, сделай как считаешь красивым
+
+% между словом и открывающей скобкой ставится пробел, это даже в программировании так! 
+даже перед параметрами функции?
+% на все у тебя есть ответ!)
+Clion за меня все сделает. Меня достаточно нажать 3 клавиши(не помню какие, но клавиши)
+Ctrl+Alt+L
+% пиши в блокноте то есть виме
+У меня произошла классная история с вимом
+Я у друга спросил, кто его подсадил на вим
+И он ответил, что я
+% =D
+
+там в дополнительном только тиньков и будет
+только если ЛКШ
+Меня просто бесит конструкция "вкладка-строчка"
+Там прекрасное название "тинькофф образование, поколение: машинное обучение, глубокое обучение"
+Я на мат. олимпиады не хожу с 9 класса % а зря :) даже на регион?
+ну их меня выбесила их субъективность % это ты еще на олимпиадах по литературе не был
+был, на школьном этапе
