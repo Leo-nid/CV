@@ -1,0 +1,8 @@
+name: tex pipeline
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  steps:
+    - run: cd code/src
+    - run: pdflatex -interaction=nonstopmode eng.tex
+
