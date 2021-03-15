@@ -3,6 +3,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   steps:
-    - run: cd code/src
-    - run: pdflatex -interaction=nonstopmode eng.tex
+    - run: cd code/src && pdflatex -interaction=nonstopmode eng.tex
+      shell: bash
 
