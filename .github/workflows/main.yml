@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     name: Pipeline
     steps:
+    - uses: actions/checkout@v2
     - uses: ./action.yml
