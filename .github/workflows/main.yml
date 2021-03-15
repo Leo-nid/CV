@@ -6,4 +6,4 @@ jobs:
     name: Pipeline
     steps:
     - uses: actions/checkout@v2
-    - uses: leo-nid/CV@master
+    - uses: leo-nid/CV@main
