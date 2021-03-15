@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   testing_tex:
-    runs-on: ubuntu-bionic
+    runs-on: ubuntu-latest
     name: Pipeline
     steps:
     - uses: ./action.yml
