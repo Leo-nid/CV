@@ -1,0 +1,8 @@
+on: [push]
+
+jobs:
+  testing_tex:
+    runs-on: ubuntu-bionic
+    name: Pipeline
+    steps:
+    - uses: ./action.yml
