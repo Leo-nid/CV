@@ -24,3 +24,5 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
 COPY . /code
 
 CMD ["bash"]
+
+RUN cd code/src && pdflatex -interaction=nonstopmode eng.tex
