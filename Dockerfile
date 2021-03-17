@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install --yes --no-install-recommends \
     texlive-base \
     texlive-pictures \
     texlive-lang-cyrillic \
+    texlive-lang-italian \
     texlive-science \
     cm-super \
     vim
